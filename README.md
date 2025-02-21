@@ -25,3 +25,11 @@ This project is a simple Java web application that demonstrates the use of servl
     location /proxy/ {
         proxy_pass http://localhost:8080/;
     }
+
+
+    curl --location 'http://localhost:8080/login' \
+    --header 'Content-Type: application/json' \
+    --data '{
+    "username":"admin",
+    "password":"saurabh"
+    }'
